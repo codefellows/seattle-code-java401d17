@@ -1,0 +1,647 @@
+{
+  "lectures": {
+    "module-01": {
+      "class-01": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/hxyePuAz5vv2tVJDtWFJR76HMFxBmR3Yz1PrTJCbFJLXHTcrw8nGLYIqvr7QIm7jl2L1IoqUqjk7ELoF.giVpohN7ridq7ptF?startTime=1666627269000",
+          "passcode": "",
+          "date": "1666627269000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/4tMwIPPL_7pBBovhTOUmrmpJSyxLvB40pMOoHtyK2sXCgfeux-dWCiHu-ICxdd-zNm2h022zhG8f9ApO.h-GfpsS0vqm0_hWX?startTime=1660579221000",
+          "passcode": "insert-here",
+          "date": "1660579221000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-02": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/MZSLYGuS7WuqnL1q0CDKhMaotz0GGoO6rzVgIBvhS15rLvekR2z81zyvNjsEWUX2Y0vWPKJLJizCM1IP.upIFfPUlfausCWmu?continueMode=true",
+          "passcode": "",
+          "date": "1669654835000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/SyAFhq4Fh7Ba3pIiAIpbJtOKvJaJV-qTl966kCK98dkA0Q6nLfrcb-c1ML5dcVs5.nM41C2ezz_K6oRnn?startTime=1660665740000",
+          "passcode": "insert-here",
+          "date": "1660665740000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-03": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/Opl6exgJ3JIsxofnJ1z4G_QD4KC112n3BvkHZgJorxc8xGhUMQNvG8wdXxt1Z4KkXHP4q8be-dT_xX75.ja8ZufIh_sOzXshC?continueMode=true",
+          "passcode": "",
+          "date": "1669654835000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/oxbPJ4gIU3Yjh_soK47wFgke2qc_7t5cHtm2BXeMLpRh4V8dAQm-Xe1QQuNlR37nQh3GhpMoUtz0vngg.MvBag92IMuXTbogx?startTime=1660752232000",
+          "passcode": "insert-here",
+          "date": "1660752232000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-04": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/mPi-7s5IaGBGVOSdQsccklLyE2jWoZuBqlx2fHZH1-iS2acq4fC2DSMz2ug8leuIOqU6l7rpPU295HE.qHUWpe3cckFTeUKb?continueMode=true",
+          "passcode": "",
+          "date": "1669654835000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/dYPEDxC8cCcPKGH3DhxZNyehNKD6RFh6xZ2fw5sHendo6ZAPsDi2Cr2GMyoPi7nX.2Cjq1RnVE7q9DHCS?startTime=1660838760000",
+          "passcode": "insert-here",
+          "date": "1660838760000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-05-career-coaching-workshop-01": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/Y5F-yy5-ed9m5DX4V-PSrz9LE2XfTLhjV7Sx5j-bH6VYTrLt1xSNpMcUic6rPAJiNd8TeT7GFt2dxbD5.FdMZiko5QNK-JVvi?startTime=1666972864000",
+          "passcode": "",
+          "date": "1666972864000",
+          "instructor": "JB Tellez"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/OhiEhrJDc_tutK3bqEJ-C0reHQcUJq_BOWyLdLlzjhD__RurwjGB4QhqE-rAn8cYee33m9sjFO6Dk4A.OH714ddtlnPc8Rmi?startTime=1660924925000",
+          "passcode": "insert-here",
+          "date": "1660924925000",
+          "instructor": "Robin Apparicio"
+        }
+      },
+      "class-05-dsa-linked-lists": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/6Bcu78YGX00ePgLgxpOuuwlbtHpeDeBUXAzZ0v4hmbzulNYQNvDNRhBlS6g_mtyEzyDyNw42f_k1-5su.nZySvpsE0a2-O-aU?startTime=1666992697000",
+          "passcode": "",
+          "date": "1666992697000",
+          "instructor": "JB Tellez"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/9l2MqU4COnIzbL647FWgipf7svQ_jfKQhnvDgFfv6KOCNK4csx0wuyMGIt2k283mheJ10-gwSTS1fKNy.EIgGB3CkHaLX3FOj?startTime=1660941103000",
+          "passcode": "insert-here",
+          "date": "1660941103000",
+          "instructor": "Alex White"
+        }
+      }
+    },
+    "module-02": {
+      "class-06": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/HoIHpk_IB6mquIi34wO9SfHfvmjlHujdw-ZbsCP_hhoRr76pWboaN8rLZfX9nYYIpwVQefpYnclBzRTx.rAv_6CgqMxmsOPrn?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/r32hMFQjEuU50Q4LxVvRpYWtl4LIvCoaPDattDbcBd7dH-piI8nRPj9kevWoXwXY.ZVfz2K6dlXeDNLRb?startTime=1661185514000",
+          "timestamp": "1661185514000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-07": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/MFd-oeldZAUMRg7OszW29qEMe_H6u-mPoR8pVymdi25CMnYK0ezYiv-v9TVFUt1tZjM7ll1Fc02Wn0kM.S6i9xATeQ1TF50mS?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/dDu-HP7Qe6Z7Im68JpYk5H-kczq8qsA75sgY2koq88wsiasKWAW1hBhUaa_uJrE.wxyTDs0KcxsJeYD6?startTime=1661270436000",
+          "passcode": "insert-here",
+          "timestamp": "1661270436000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-08": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/G_56T7fc_GaMNIsK18sV2hcuDJhFnlV5I6D2v58wM0GXhu9YNMDVDVzYrp2eYZ1mrn5xI2DPahW5HIyw.78qNsX_hmK-XL5sw?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/lyUfqwLHBtpSPet84nnVaoNt34NbrvbCZ3iNRKbn8IqzFloTAcI-H-J2taPjxCuV.2anNgisB7qVg9W1j?startTime=1661358841000",
+          "passcode": "insert-here",
+          "timestamp": "1661358841000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-09": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/kFH0OqPQxpaonhxUH7m4VKCpsotr41woj_WWvZrWtUR4OfFxwL753kyjhncWfevWfieZP62x_cZE9HXZ.EWUgeMHQ7H92qQVA?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/XrkumXDbfAAr6a_Pd6K8B0-mNffQKLflD9vtkRoAeLe876TFX2qx2r0N50cVykzY.4MvhW4laHAT9Cibx?startTime=1661443247000",
+          "passcode": "insert-here",
+          "timestamp": "1661443247000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-10-career-coaching-workshop": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/IUEMz36ZRHglmsPkhnVeNu3Nv01bZVYIfnVDelfkc-C5x--ycCRSeuy_ZHwkqjnzQjAbAil93ozDpqGc.99s59DN9ZkJCEDqf?startTime=1667595646000",
+          "passcode": "",
+          "timestamp": "1667595646000",
+          "instructor": "JB Tellez"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/ioZWOeqc6a52Sl5bwTql5Ff0RqCn_2mIlJY6vcSHwRtxvAJjTFRPnRmciuZczIu5m1I1UTSYqx74ikAP.6QZBn_lM6khLitze?startTime=1661529733000",
+          "passcode": "insert-here",
+          "timestamp": "1661529733000",
+          "instructor": "Robin Apparicio"
+        }
+      },
+      "class-10-dsa-stacks-and-queues": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/B8fGDO_GuVoEqmoQhl-GWn_VDrkX7-X1MFhrvHUiTv5LCCHekJMZOZLkgdOMbz52P948vLj90ez5DOw-.HV7mldTT_BT4RGVH?startTime=1667595646000",
+          "passcode": "",
+          "timestamp": "1667595646000",
+          "instructor": "JB Tellez"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/KZeGdRbmNTw7b63S4IDRAEWOoAIVfxU7jRpUEoCodlxhQA3-AShUcqJvsThSMmJ1cqeX78X51_MkgnE.ZLYynvy58KPMLdIF?startTime=1661547669000",
+          "passcode": "insert-here",
+          "timestamp": "1661547669000",
+          "instructor": "Alex White"
+        }
+      }
+    },
+    "module-03": {
+      "class-11": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/DUU3j7UruYiibuBAL62UdLBs-flpRNHLqXOWQ1apJcUlLrGHyu7de_qwYSkdZZQ9ahKEVnlD0_UUvnYM.rFOA8r2kljsDyL7A?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/hKpkLA69J5bjXK3Ofh0rqdvdMvtQNAKQs-KtErhid0T-zTHTsGxjtGojqdp6AJY5.vw3bPjQUt2toEz00?startTime=1661788921000",
+          "timestamp": "1661788921000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-12": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/hSEWK7UVtXYxWTsBs9gBRbqQ6VRYJ_FrUsuDlZV27Ekt34G90yg97e752xQ9szHZRonONEFKjmRoiXf9.SBPJitpYhnRC12cQ?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/rWTr06X1kondmzxWUX__2f6XWeURBHkQzdRZ9f9SyHCb7Jid7NFCxCdYva0B2gV7.B9c3B_YHpdxjjYo8?startTime=1661875427000",
+          "passcode": "insert-here",
+          "timestamp": "1661875427000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-13": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/ppDXDRlSoWKfNujEyU8tstyZGLBSPFboD5FymKyaZyn_gqGkP1mreJ2C5Dz3uoo4FA9yXKcLPWC4BNrd.UPrZmSIRteBOjLke?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/T_ZmZy-Oso3BNBwhaArFvmi7n7AX61jh9VAvQC0oiCkk90tjm3I96RCp6pzQNS6s.PkZTVy7XZkXyjncY?startTime=1661961707000",
+          "passcode": "insert-here",
+          "timestamp": "1661961707000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-14": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/2hoU7dKv8FYf1u9lqX46VSG9XellXoxLMuTbhNSCC8VnPXF_nsddDLPvbB_EujkyAWLVlxd_bxEjyoGi.VMwiMBi3BQGnKL5p?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/CZLwMJatoPqPcXPvdKrv92n82F1h3Aq6qkSj495yPaYZ-UHfZRD7CCVdRSjIW9p7.p9fRpQBPsS_k_r-D?startTime=1662048151000",
+          "passcode": "insert-here",
+          "timestamp": "1662048151000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-15-career-coaching-workshop-03": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/rABlxu9No7D8lpQr38Ykgm_vIXpH5Mc7UBgwD6nKqy6G5DJtxrR_7otCipW7I2SqEiR3MgfnQ5vkLoG9.tWQo5TSpRVx30aCi?startTime=1668204274000",
+          "passcode": "",
+          "timestamp": "1668204274000",
+          "instructor": "Robin Apparicio"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/M1wTzdsGMbNV5KV7vGqwIjor8r9La1W6K1NAML5n4gIrBMy8ecZcIdxAb7bMKvw.NYZ0XMP5fucjGFYU?startTime=1662134455000",
+          "passcode": "insert-here",
+          "timestamp": "1662134455000",
+          "instructor": "Robin Apparicio"
+        }
+      },
+      "class-15-dsa-trees": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/NiXZcRqLd-LnQH48y3XmDh2LuOGbAQC9m12-f0ZG5tHJFJxlyVC2fiwI3u59kSG3y4kqWSTtyUCZVnu2.3nRY0weEqO8R9Fjm?startTime=1668186108000",
+          "passcode": "",
+          "timestamp": "1668186108000",
+          "instructor": "JB Tellez"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/1VQ9O0M0p6z9xytICQwUzOYF7ZyzlMb7nZpKtTaghnnCgK8QwtucM-3EKVxTxexmwKkf9ZqwRwruPWR9.IM3Zsw0MEREYkh_y?startTime=1662142509000",
+          "passcode": "insert-here",
+          "timestamp": "1662142509000",
+          "instructor": "Alex White"
+        }
+      }
+    },
+    "module-04": {
+      "class-16": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/hVkp6Fd4CxKVxv1qX7CJ_udMpz9_2s5C5vNqNU0rPh3ict0CxJtn-wEkv2GorZDHxs2bPMEovS5OISRY.RSZsf9RVK95dOY0W?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/JDb3rUPvlvdehuOtDg8Dw_NObVOE2utoSTyMCXJPSTDIAaGnR3bsss8WiUEK-zzX.Anq8fxsZ25VTaVvD?startTime=1662480631000L",
+          "timestamp": "1662480631000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-17": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/1v8Kt0wch_Iq6_zOTiuYrtCwL-R8henUMb55UlsIE9dpEYMgGuLrpJEf4noPXXpwWpMm3O9n_dgZkFYc.NecL1no0VDDJEQrK?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/sWhnJS4aJ4ZgobdmPphnuR29FaqXlX7PO7TcrnOwfbrtyenBQ0Db2NQ_tlZyU3F2.jTfv3DhQ0D0TcRtN?startTime=1662566503000",
+          "passcode": "insert-here",
+          "timestamp": "1662566503000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-18": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/yKGpGCMBi0KgSWltb__CtKQR9bZyp-e9uZ7rXAA7WxmHXWGlyngqRrwOlM0xvyJt7Xi4XvO57QK3lqRt.gS3W7LDF8AQjJ2oV?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/apXJ2WqbKRxHMgJJ0roM-bYXaK79s68O2WVGiLsyTIFwb89tGtXk2uNu1gK8zTng.AY2CGnhOrB17cFkw?startTime=1675271113000",
+          "passcode": "insert-here",
+          "timestamp": "1675271113000",
+          "instructor": "Rey Oliva"
+        }
+      },
+      "class-19": {
+        "primary": {
+          "link": "https://zoom.us/rec/share/2M0v7Y9bnVfYYXUIS8YQnWZLoxHtHJKTMsBvVHwXM2zPHcXzH-8dEr0xF17itsub.t1D4UfbfF4esFfiv",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Rey Oliva"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/OTHER-URL",
+          "passcode": "insert-here",
+          "timestamp": "1667328823268",
+          "instructor": "Audrey Patterson"
+        }
+      },
+      "class-20": {
+        "primary": {
+          "link": "https://www.youtube.com/watch?v=8v2LhOwxh5Y",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/OTHER-URL",
+          "passcode": "insert-here",
+          "timestamp": "1667328823268",
+          "instructor": "Audrey Patterson"
+        }
+      }
+    },
+    "module-06": {
+      "class-26": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/P3uvR8fMcudWaHg4YJVLxeXvGNIBbomlIUjuI7EfPfn8i0EklaWyKhLs4jzclUEu6dHCKZdGFhkO-e70.wwj1P5jjk8vu858-?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/TbxUdOZO6r7it-hxydvFJYhNfm-h0gBmZVtQgtg-B1jQ3fAZdQjSotX7lz033oGv.er0EA81eiTd1BRoD?startTime=1663607078000",
+          "passcode": "insert-here",
+          "timestamp": "1663607078000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-27": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/f7Ff3kD1nbP4wLnBjlosCcxIbhUmDoNeSvITAZBdE0lL6rB6lgExx7WfFRms0GY7_3KUQ4IbDhZN5is6.fjn9qRVZ9flLHd51?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/yvQaFalpuSrz6a--b959pEDlUh-JwQ2GA9o51L5sYEXpT6x4oxK84RViDko5SidA.W_0mr-YDoptaMUBs?startTime=1663691521000",
+          "passcode": "",
+          "timestamp": "1663691521000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-28": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/JxAIj9GX_L9W8UZbcukG34XQj-bpj6SPtoeF5ntqXXO3GvPXGdNAuIhMExv5fEgHBSgumBd95c_2xVfb.ZzmJkwAqP_8kayIS?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/tGjhFiKzOSRuSUkY0FrTS1-UJ3g6tYLxqjgO-Tt26qnO8v6DnQMSlczkaK2xgBA.Iu0q3tqLt5OM4_Oq?startTime=1663776253000",
+          "passcode": "",
+          "timestamp": "1663776253000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-29": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/5JLLXvmFR1kSXunfahQlS4P1Kw7gPhBu41P6VQ8DewVCUYeppJdRMXCq14eoZ3dpWwRREK9F4bRJJAGI.ccds-jjPONypGgSb?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/nupswc-miU2UQg5UQ3NX64ZjqTomPrwHBjXNeaD1qRHEWwLlD8w3FKzZEuU8SIcF.QJz-uB6fdGwdVDDF?startTime=1663862811000",
+          "passcode": "",
+          "timestamp": "1663862811000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-30-career-coaching-workshop-04": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/xLpSp3RE88PVAxUBcwK0ixHzcniQNcnksNtK5dvJkrdOz1Gt89FwfByeLur99qqZtUChg-LodRQdRbXa.PvBLK-IpODwB-tFQ?startTime=1670018737000",
+          "passcode": "",
+          "timestamp": "1670018737000",
+          "instructor": "John Cokos"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/22QI2BARyFl4oOdGcNFNmFV0iulwzCTUKRZtTHrPHgRO8EQG4GdJPEmCAXSXvcPEFdHbWKzOLwjFoi-Q.MX-LOT04XQyHTCbS?startTime=1663948931000",
+          "passcode": "",
+          "timestamp": "1663948931000",
+          "instructor": "Brook Rigio"
+        }
+      },
+      "class-30-dsa-hashTables": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/0AwgVxjwADAcW6BzOBCW0BaC_hcsjzoolA9dyEreHNyOZjXHXrkzPRwgUsIE7wJRmoOBpIIjaOYd_uw9.9BhDHnwkmBDKNY6T?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "JB Tellez"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/YVf_DzNbLSOuDTMl6LY0DP7ZpeRDxjru1tAdk2uxxVmy0hXycEwSGyCosDkDG1E3.cBQS0QA4rI4W4BBl",
+          "passcode": "",
+          "timestamp": "",
+          "instructor": "Rey Oliva"
+        }
+      }
+    },
+    "module-07": {
+      "class-31": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/ld6AIjX9L6EFmQzf0bTsmakoo01FFlc3UVoKbP_sVSaBhMisnTPxLYnGq5HnRI5WDeYwFlqnsV3QiZBV.jp1Q0cM7gGN-Ki6d?startTime=1670433861000",
+          "passcode": "",
+          "timestamp": "1670433861000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/dKRJ6l4FZ38n0bSm4Jl4uCB92k2p0-I-HIgDu8ngr-ZpgzSEk24Ba8Zmyz1ohnE1.wWZtNeNg6Su77IM8?startTime=1664208346000",
+          "passcode": "",
+          "timestamp": "1664208346000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-32": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/Pm1Y967r8t_o1OxuszE2uDxaDhFOaWyLsxsE65U8YIHysjLR3iXEvb1Mvs96rCUqYUZj8XpllJE911JQ.hzNs1Oy-Xj7bt9Hd?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/GXbqTDChx10b7XGfff-GnuGvol_MMr9BlcOl4YIh_EtV5RFb5lyu-rgj0NWfWFuT.uZDxphIfC93BVugp?startTime=1664296570000",
+          "passcode": "",
+          "timestamp": "1664296570000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-33": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/lrJ9xIL9tBEPDCRmC5DjQPA4xqM-H_9i9SyCtQMFGjMtjcVfKc0WWtqO-iPLIkeUkhmYYuYiiPh3GrRu.SVlnnVaqF-6jbUd0?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/1tyzj9NPogwNTYwe3aKCU5Ylg6QZB2v8YqsQKE3Gv0gteNVbUB1_0idXahE_aAbv.591O9yrKGEwbfNmp?startTime=1664380950000",
+          "passcode": "",
+          "timestamp": "1664380950000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-34": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/ykJRoR0VTFhQhh9nkgb0RtRgxg_sqLVahmKu3FfhVHyIfsdf2KCNu5Woau2EKx09I96DPLtgVDYiRWlj.gzXr1d090-3deFuy?startTime=1671123872000",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/_X_VRMpiXnuPpWCi8Q01ENOS1pafnFm947uYDP-pDVZ9l7XIRnDdYXnR32dNO5le.wN_yyN9IBBr3Ltsp?startTime=1664467527000",
+          "passcode": "",
+          "timestamp": "1664467527000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-35-career-coaching-workshop-05": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/-Fyid3zggiduVRadNkpMfGcK_990GFTzoLwAoZgK9Nu37f142XUMBpllAW44L8aJRGCzvUTQBz_X3Pw._-tV-VeiqiXdfhcw?startTime=1670606853000",
+          "passcode": "",
+          "timestamp": "1670606853000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/_MdRsIZK4BFflox0X0tyX05nkcjfVb8PrZYkxI3nKdxKMdGgWJRBQHnqV4F9JK6SXqAC2iD3ADCEPt1C.Gwjc1sKY8v_Hvq12?startTime=1664554112000",
+          "passcode": "",
+          "timestamp": "1664554112000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-35-dsa-graphs": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/PkVHQILuH40FpaXh0bR__8QN61fnIYBjOw4B5A4p1qfCfUBmhdhFt_69AGZHMM1QUCgU4_JMd0YhDClO.4nnD2e9sA4O2YGuo?startTime=1670623437000",
+          "passcode": "",
+          "timestamp": "1670623437000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/w9LD27kM6Ne6_gfDXNO6XGtLVTkDrnEp58zDiYy3VkPwCcxKNzLzwn8Nfj8zakkyXZlHM770sHMjnCWt.hf7QDxvwub6SpyS-?startTime=1664569936000",
+          "passcode": "",
+          "timestamp": "1664569936000",
+          "instructor": "Alex White"
+        }
+      }
+    },
+    "module-08": {
+      "class-36": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/gYjVJgmzOPfRN7XkrS5h1-Yzd9Vi5OvuIux414a1gvpKMYSMZ3YB3nQZIqLzpHUot2JwVl0PQc-4MToT.8ISeBB_0zgXu4imY?startTime=1670951015000",
+          "passcode": "",
+          "timestamp": "1670951015000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/play/mdTaf00Voc8xZM6zL6oEWys6ZvXiQt8R7_znSwvLUat1P7exDvttr8-CbUPoPUY3hlkCRYZ0jhtHwDVz.dICgppTnObYWBbvx?continueMode=true",
+          "passcode": "",
+          "timestamp": "",
+          "instructor": "Alex White"
+        }
+      },
+      "class-37": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/uFTeUr_ClMlr7f5alM_9sWoEy8OL81bJF8vXBgxG0Pljc7861P4_QUfMqgJIqytLEOSklyBpRC1yw1IE.JjKM23mMSf0SPCYb?startTime=1671041506000",
+          "passcode": "",
+          "timestamp": "1671041506000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/06JSxsb752TFE1NGsBySf2xqdLeapkEtvcd8sHe_R6EiEyyq3PvJAOUyWgKbaPUb.0N-afKM2saQ2aRFA?startTime=1664901990000",
+          "passcode": "",
+          "timestamp": "1664901990000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-38": {
+        "primary": {
+          "link": "https://zoom.us/rec/share/TNS6c7MmJfmwRlZyM4tiQNDfRxWGukBzY-9xH0CuZryrEj66MhFZEnnllMQXWesQ.l3NnFMmXDwuNhQu3",
+          "passcode": "nU*0Qq6=%k",
+          "timestamp": "1000000000",
+          "instructor": "Ed Younskevicius"
+        },
+        "backup": {
+          "link": "Zoom",
+          "passcode": "",
+          "timestamp": "",
+          "instructor": ""
+        }
+      },
+      "class-39": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/g222w1afzECAvkYuNr3A93SNvlhpBRFTdgHsSWsPri16DMvtEomPLR-1PlUOjEV5iEGtShZP-vMQxjwt.3jirndrw3J9lONBL?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/HUaOwlmibVYUSHcZcc62_vDCzHk7HGW03FJgdkBBSWW2fofYJT83vWpRVJti2aLs.DMf8a3lvyJa-xzVn",
+          "passcode": "",
+          "timestamp": "",
+          "instructor": "Alex White"
+        }
+      },
+      "class-40-coaching-workshop-06": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/B_N-BoTPR2hTDlMUAoUePyGFFCNB2AkGRjL1HftkTbNAuCKcjyxM1hNjKfiH5Pmh6YJR1rSAwingZdKG.dgu4RxxPzUbRpAZ6?continueMode=true",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/ii6Bmk-CB7TksWRKRndF6KQXdMbLYYKHOjrEmJ5JYDaM6bdPMaT3rOkeKQVR9Fu5.a0xxu4qAY1LHYeQm",
+          "passcode": "",
+          "timestamp": "",
+          "instructor": "Alex White"
+        }
+      }
+    },
+    "module-09": {
+      "class-41": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/T93-MMY9-q4v-FXr8lGdQEPqnZUYfk-6csWtoEGOJhT8eV3Qr-POvPBZdUoBd-7_hhhYZOk3TxWkwa8.wmiBaqh4GpUKRANk?startTime=1671557912000",
+          "passcode": "",
+          "timestamp": "1671557912000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/Ziywrd4RvR0Q_-FZJ3cSHrwY7w4KHBJNM3dUcFMHcg5Uwfzj3oBUNZzMMrhBVXMG.vBPwYL7t4H2Am9Ik?startTime=1665421329000",
+          "passcode": "",
+          "timestamp": "1665421329000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-42": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/cnnQ7Hm7MIXh_3NBlmVHmfKjqMUT8qrQvujGoEL-6sf8oKZYOwj_9DalANXGuyneeMqP13q-jTmPD-km.21Jc5p-S17h17sSS?startTime=1671642178000",
+          "passcode": "",
+          "timestamp": "1671642178000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/OTHER-URL",
+          "passcode": "insert-here",
+          "timestamp": "1667328823268",
+          "instructor": "Audrey Patterson"
+        }
+      },
+      "class-43": {
+        "primary": {
+          "link": "https://zoom.us/rec/play/Bbg8B8hpV0EZTDt88V4xoq6sD6CEmmH-DeGEYp0F16KxzzqEOqhGUr0TYks56iBS2UYWMCjx1o3xzyYs.gCiLIJ0tgLyuDLvd?startTime=1669656369000",
+          "passcode": "",
+          "timestamp": "1669656369000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/o5MwzeHqewpmSITC7hQyhZdyTERU-yjjY0vaxPpUyUfBhQsjEZBQ5FvdXHXwawbc.YJZBXKv_PfyqZVk2?startTime=1665590870000",
+          "passcode": "",
+          "timestamp": "1665590870000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-44": {
+        "primary": {
+          "link": "https://zoom.us/rec/share/Chx5tDPOGNHTCAcPX7ktbsNqHmlUWrEmcgIfM8H6f-2zKrWV0iYLeXf_ZM5StH-i.wwXIQzO_obxGe1WD?startTime=1671728726000",
+          "passcode": "",
+          "timestamp": "1671728726000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/l1r7CiW0L7R3p3rYpXmhgn_URcxdSPeZTTIzCERmuKCot7qnpPnnSQmrBMhzUZe.8UfPBh8BeEjvOeQJ?startTime=1665507865000",
+          "passcode": "",
+          "timestamp": "1665507865000",
+          "instructor": "Alex White"
+        }
+      },
+      "class-45": {
+        "primary": {
+          "link": "zoom",
+          "passcode": "",
+          "timestamp": "1000000000",
+          "instructor": "Alex White"
+        },
+        "backup": {
+          "link": "https://zoom.us/rec/share/OTHER-URL",
+          "passcode": "insert-here",
+          "timestamp": "1667328823268",
+          "instructor": "Audrey Patterson"
+        }
+      }
+    }
+  }
+}
