@@ -9,6 +9,26 @@ import static org.junit.jupiter.api.Assertions.*;
 class LibraryTest {
     @Test void someLibraryMethodReturnsTrue() {
         Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+        assertTrue(classUnderTest.someLibraryMethod());
+    }
+
+    @Test void returnPassedNumberReturnedPassedValue() {
+      //   Arrange (our data)
+      Library sut = new Library();
+      int returnedValue;
+      //   Act (upon our data)
+      returnedValue = sut.returnPassedNumber(10);
+      //   Assert (our expected value)
+      assertEquals(10, returnedValue);
+    }
+
+    @Test void checkArrayListSizeIs5() {
+    //   Arrange
+      Library sut = new Library();
+      int myArrayListSize;
+    //   Act
+      myArrayListSize = sut.loopedThroughLists();
+    //   Assert
+      assertEquals(5, myArrayListSize);
     }
 }
