@@ -34,7 +34,6 @@ public class App {
       favColors.put("red", favColors.get("red") + 1);
 
       System.out.println("Favorite colors in the class: " + favColors);
-
     }
 
     public static HashSet<String> whoAnsweredQuestions(ArrayList<String> students) {
