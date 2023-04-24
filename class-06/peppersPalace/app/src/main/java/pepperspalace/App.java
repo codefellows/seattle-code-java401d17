@@ -23,22 +23,17 @@ public class App {
         //  doesn't work if Animal is an abstract class
         // Animal something = new Animal("some", 4, 5);
 
-      Animal fakeOcelot = new Ocelot();
-      // debugger knows fakeOcelot comes from an Ocelot object
-      // but cannot access Ocelot's class methods because fakeOcelot is still only an Animal
-      // line below will fail
-      // fakeOcelot.pounce();
-
-      // lines below work because we have casted the Animal to an Ocelot
-      Ocelot realOcelot = (Ocelot)fakeOcelot;
-      realOcelot.pounce();
+      /**
+       * TYPECASTNG
+       * parent from child => OKAY
+       * child from parent => DANGEROUS
+       **/
 
       Ocelot indi = new Ocelot();
       Animal animal = (Animal)indi;
       Ocelot ocelot = (Ocelot)animal;
 
-      // All use Ocelot's values and can access Ocelot's methods because they were originate from Ocelot
-      // BUT animal cannot run .pounce() without explicitly being casted to an Ocelot
+      // All use Ocelot's overridden methods because they were originally from Ocelot
       System.out.println("indi says: ");
       indi.makeNoise();
       System.out.println("animal says: " );
@@ -46,13 +41,26 @@ public class App {
       System.out.println("ocelot says: " );
       ocelot.makeNoise();
 
+      // BUT animal cannot run .pounce() (or access Ocelot specific fields) without explicitly being cast to an Ocelot
       // line below crashes
       // animal.pounce();
       // line below works because we cast in place
       ((Ocelot) animal).pounce();
 
       Animal newAnimal = new Animal("name", 4, 4);
-      // uncommenting line below will cause
+      // uncommenting line below will cause runtime error as Animal is missing fields required for creating an Ocelot
+      // therefore this cast is unsafe
       // Ocelot newOcelot = (Ocelot)newAnimal;
+
+      // Edge case example
+      Animal fakeOcelot = new Ocelot();
+      // debugger knows fakeOcelot comes from an Ocelot object
+      // but cannot access Ocelot's class methods because fakeOcelot is still only an Animal
+      // line below will fail
+      // fakeOcelot.pounce();
+
+      // lines below work because we have cast an Animal made from an Ocelot to an Ocelot
+      Ocelot realOcelot = (Ocelot)fakeOcelot;
+      realOcelot.pounce();
     }
 }
