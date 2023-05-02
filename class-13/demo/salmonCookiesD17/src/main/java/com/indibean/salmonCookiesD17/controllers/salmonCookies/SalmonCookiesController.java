@@ -19,12 +19,12 @@ public class SalmonCookiesController {
   @Autowired
   SalmonCookieStoreRepository salmonCookieStoreRepository;
 
-
-  @GetMapping("/cookies")
-  public String getCookies() {
-    return "/salmonCookies/salmonCookies.html";
-  }
-
+  // *****GET Mappings*****
+  /**
+   * splash page
+   * displays all cookie stores
+   * if there is a store named "tampa" shows it again after list
+   **/
   @GetMapping("/")
   public String getsSplashCookies(Model m) {
     List<SalmonCookieStore> stores = salmonCookieStoreRepository.findAll();
@@ -39,6 +39,12 @@ public class SalmonCookiesController {
     return "salmonCookies/salmon-cookies-stores.html";
   }
 
+  /**
+   * returns page displaying name of {cookie} from the path
+   * adds description for cookie is specified in query param
+   * otherwise gives default value
+   * route used to show VERY basic styling of a webpage
+   **/
   // localhost:8080/cookies/chocolate%20chip?cookieString=%20is%20yummy
   @GetMapping("/cookies/{cookieName}")
   public String getNamedCookies(Model m,
@@ -46,9 +52,23 @@ public class SalmonCookiesController {
                                 @RequestParam(required = false, defaultValue = "is my favorite") String cookieString) {
     m.addAttribute("name", cookieName + cookieString);
     System.out.println(cookieName);
-    return "/salmonCookies/salmonCookies.html";
+    return "/salmonCookies/cookie.html";
   }
 
+  /**
+   * returns page containing form for updating a store
+   **/
+  @GetMapping("/cookie-store/update")
+  public String getUpdateStorePage() {
+    return "/salmonCookies/salmon-cookie-update.html";
+  }
+
+  // *****PUT Mappings*****
+  /**
+   * no associated form,
+   * expect posts to be created from this path via Postman
+   * returns splash page after post completes
+   **/
   @PostMapping("/")
   public RedirectView createSalmonCookieStore(String name, Integer averageCookiesPerDay) {
     SalmonCookieStore newStore = new SalmonCookieStore(name, averageCookiesPerDay);
@@ -57,6 +77,11 @@ public class SalmonCookiesController {
     return new RedirectView("/");
   }
 
+  /**
+   * accosicated with form on splash page,
+   * creates new store with generated id
+   * redirects to splash page after post completes
+   **/
   @PostMapping("/cookie-store/")
   public RedirectView addStoreFromForm(String name, Integer averageCookiesPerDay) {
     SalmonCookieStore newStore = new SalmonCookieStore(name, averageCookiesPerDay);
@@ -65,11 +90,12 @@ public class SalmonCookiesController {
     return new RedirectView("/");
   }
 
-  @GetMapping("/cookie-store/update")
-  public String getUpdateStorePage() {
-    return "/salmonCookies/salmon-cookie-update.html";
-  }
-
+  /**
+   * associated with form on "/cookie-store/update",
+   * updates db entry if store with id from the form exists in db,
+   * otherwise creates new store with specified id
+   * redirects to splash page after post completes
+   **/
   @PostMapping("/cookie-store/update")
   public RedirectView updateStore(Long id, String name, Integer averageCookiesPerDay) {
     SalmonCookieStore updatedStore = new SalmonCookieStore(id, name, averageCookiesPerDay);

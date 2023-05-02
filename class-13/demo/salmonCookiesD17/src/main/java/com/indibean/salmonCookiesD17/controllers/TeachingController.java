@@ -12,12 +12,4 @@ public class TeachingController {
   public String testMethodHere() {
     return "Hello world!";
   }
-
-  // @GetMapping("/")
-  // public String renderBffPage(Model m) {
-  //   m.addAttribute("name", "Indi");
-  //   m.addAttribute("years", "3");
-  //   m.addAttribute("occupation", "Sleep");
-  //   return "/teaching/best-friend.html";
-  // }
 }
