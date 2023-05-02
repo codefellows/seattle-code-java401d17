@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.explore {
+    font-size: 1.2rem;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.splash p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.splash h1  {
+    font-size: 4rem;
+    margin-bottom: 20px;
+
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+
+}
+
+.splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.album-list {
+    margin: 2em;
+}
+
+.album-list table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.album-list th,
+.album-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.album-list th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.album-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.album-list tr:hover {
+    background-color: #ddd;
+}
