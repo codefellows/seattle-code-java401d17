@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h1>Salmon Cookies!</h1>
+
+<!--stores come from our controller. GET method -->
+<ul th:each="salmonStore : ${stores}">
+  <!--notice the string we create within thymeleaf-->
+  <li th:text="'Store name ' + ${salmonStore.name}">store name</li>
+  <li th:text="'Average cookies per day ' + ${salmonStore.averageCookiesPerDay}"></li>
+  <!--  Lets show all the employess for each store-->
+  <div>Employees</div>
+  <ul th:each="employee : ${salmonStore.employees}">
+    <li th:text="'name: ' + ${employee.name}"></li>
+    <li th:text="'pay: ' + ${employee.payPerHour}"></li>
+  </ul>
+  <form action="/employee/add" method="POST">
+    <fieldset>
+      <legend>Add employee to this store</legend>
+      <label>Employee Name</label>
+      <input type="text" name="name">
+      <lable>Pay</lable>
+      <input type="text" name="payPerHour">
+      <input type="hidden" name="storeName" th:value="${salmonStore.name}">
+      <input type="submit" value="add employee to store">
+    </fieldset>
+  </form>
+</ul>
+
+<!--return a single store from a GET method-->
+<li th:text="${storeName}">store name</li>
+<li th:text="${storeSales}">store sales</li>
+
+<!--form to create new stores-->
+<form action="/cookie-store/" method="POST">
+  <fieldset>
+    <legend>Add Salmon Cookies Store</legend>
+    <label>Store Name</label>
+    <input type="text" name="name">
+    <label>Average Cookies Per Day</label>
+    <input type="text" name="averageCookiesPerDay">
+    <input type="submit" value="Add Store">
+  </fieldset>
+</form>
+
+<!--delete a store by id-->
+<!--<form th:action="'/cookie-store/' + ${salmonStore.id}" th:method="delete">-->
+</body>
+</html>
