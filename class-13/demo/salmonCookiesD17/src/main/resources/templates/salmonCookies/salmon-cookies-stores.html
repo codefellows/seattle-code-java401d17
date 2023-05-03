@@ -13,6 +13,24 @@
   <!--notice the string we create within thymeleaf-->
   <li th:text="'Store name ' + ${salmonStore.name}">store name</li>
   <li th:text="'Average cookies per day ' + ${salmonStore.averageCookiesPerDay}"></li>
+  <!-- Let's display the employees for each store-->
+  <div>Employees: </div>
+  <ul th:each="employee : ${salmonStore.employees}">
+      <li th:text="${employee.name}">name</li>
+      <li th:text="${employee.payPerHour}"></li>
+  </ul>
+  <!-- Let's create a form to add employees to the store -->
+  <form action="/employee/add" method="POST">
+    <fieldset>
+      <legend>Add Employee to this Store</legend>
+      <label>Employee Name</label>
+      <input type="text" name="name">
+      <label>Price Per Hour</label>
+      <input type="text" name="pricePerHour">
+      <input type="hidden" name="storeName" th:value="${salmonStore.name}">
+      <input type="submit" value="Add Employee to Store">
+    </fieldset>
+  </form>
 </ul>
 
 <!--return a single store from a GET method-->

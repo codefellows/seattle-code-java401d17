@@ -1,9 +1,8 @@
 package com.indibean.salmonCookiesD17.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 // To store this in the DB
 // 1. add @Entity annotation to data model
@@ -16,9 +15,11 @@ public class SalmonCookieStore {
   //if more than 25 characters needed, use two annotations
   //@Lob
   //@Type(type = "org.hibernate.type.TextType")
-
   String name;
   Integer averageCookiesPerDay;
+  @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
+  List<Employee> employees;
+
 
   // 3. create a protected default constructor
   protected SalmonCookieStore() {}
@@ -48,6 +49,10 @@ public class SalmonCookieStore {
 
   public void setAverageCookiesPerDay(Integer averageCookiesPerDay) {
     this.averageCookiesPerDay = averageCookiesPerDay;
+  }
+
+  public List<Employee> getEmployees() {
+    return employees;
   }
 
   @Override
