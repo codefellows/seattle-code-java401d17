@@ -21,5 +21,11 @@
 <div th:text="${profileId}" type="text" name="profileId" id="profileId"></div>
 <label for="profileDateCreated">Date Created</label>
 <div th:text="${#temporals.format(profileDateCreated, 'MM-dd-yyyy')}" type="text" name="profileDateCreated" id="profileDateCreated"></div>
+
+<!--FORM FOR DELETING A USER-->
+<form th:action="${'/user/' + profileId}" th:method="DELETE">
+  <!--  use th:if to make sure the delete button is only visible on a user's own profile -->
+  <input th:if="${username.equals(profileUsername)}" type="submit" value="DELETE USER">
+</form>
 </body>
 </html>
