@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h3 th:if="${username != null}" th:text="${'Current logged in user: ' + username}"></h3>
+<div th:replace="/fragments/error-fragment :: siteUser-error"></div>
+<h1 th:text="${'User info for user id: ' + profileId}"></h1>
+
+<form th:action="${'/user/' + profileId}" th:method="PUT">
+  <label for="username">Username 1</label>
+  <input th:value="${profileUsername}" type="input" id="username" name="username" th:disabled="${!username.equals(profileUsername)}">
+  <input  type="submit" value="edit user info">
+<!--  Add line below back to submit to stop the submit button from working clientside-->
+<!--  th:if="${username.equals(profileUsername)}"-->
+</form>
+<label for="id">Id 1</label>
+<div th:text="${profileId}" type="text" id="id"></div>
+<label for="dateCreated">Date Created</label>
+<div th:text="${'Date created: ' + #temporals.format(dateCreated, 'yyyy-MM-dd')}" type="text" id="dateCreated"></div>
+</body>
+</html>
