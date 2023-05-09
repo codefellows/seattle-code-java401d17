@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<h3 th:if="${username != null}" th:text="${'Current browsing user: ' + username}"></h3>
+<div th:replace="/fragments/error-fragment :: siteUser-error"></div>
+<h1 th:text="${'User info for user id: ' + profileId}"></h1>
+
+<form th:action="${'/user/' + profileId}" th:method="PUT">
+  <label for="profileUsername">Username</label>
+  <input th:value="${profileUsername}" type="text" name="profileUsername" id="profileUsername" th:disabled="${!username.equals(profileUsername)}">
+  <input type="submit" value="edit user info">
+  <!--  th:if in line below, hides the submit button if browsingUser != profileUser -->
+  <!--  th:if="${username.equals(profileUsername)}"-->
+</form>
+<label for="profileId">Id</label>
+<div th:text="${profileId}" type="text" name="profileId" id="profileId"></div>
+<label for="profileDateCreated">Date Created</label>
+<div th:text="${#temporals.format(profileDateCreated, 'MM-dd-yyyy')}" type="text" name="profileDateCreated" id="profileDateCreated"></div>
+</body>
+</html>
