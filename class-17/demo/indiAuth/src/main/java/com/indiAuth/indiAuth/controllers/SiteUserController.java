@@ -143,4 +143,29 @@ public class SiteUserController {
     return new RedirectView("/user/"+id);
   }
 
+  //METHOD FOR DELETING A USER
+  @DeleteMapping("/user/{id}")
+  public RedirectView deleteUser(@PathVariable Long id, Principal p, RedirectAttributes redir) {
+    //delete doesn't care if it exists or not
+    //so we can just pass in without the need for checks
+    //BUT we SHOULD do checks to make sure a user can only delete themselves...
+    //so let's check the p first
+    SiteUser userToDelete = siteUserRepository.findById(id).orElseThrow();
+    if(p != null && p.getName().equals(userToDelete.getUsername())) {
+      siteUserRepository.deleteById(id);
+      //make sure the p is null after delete
+      //otherwise you may have some incorrect values still stored in your session
+      p = null;
+    } else {
+      //if a user isn't authorized to delete and they press the button
+      //flash an error and keep them on the same page
+      redir.addFlashAttribute("errorMessage", "Cannot delete another user's account!");
+      return new RedirectView("/user/"+id);
+    }
+
+    //with a void return type we would just return an error page after delete is completed
+    //let's bring users back to the homepage instead
+    return new RedirectView("/");
+  }
+
 }
