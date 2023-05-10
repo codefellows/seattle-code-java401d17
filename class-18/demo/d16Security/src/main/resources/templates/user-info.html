@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--FRAGMENTS-->
+<div th:replace="/fragments/nav-header :: h3"></div>
+<div th:replace="/fragments/nav-header :: auth-user"></div>
+<div th:replace="/fragments/nav-header :: list-frag"></div>
+<div th:replace="/fragments/error-frag :: error-fragment"></div>
+
+<h3 th:if="${authUser.username}" th:text="${'Current user: ' + authUser.username + ' with nickname ' + authUser.firstName}"></h3>
+<h1 th:text="${'User info for user id: ' + viewUser.id + ' with username: ' + viewUser.username}"></h1>
+
+<!--HTML FORMS ONLY DO GET AND POST-->
+<form th:action="${'/user/' + viewUser.id}" th:method="PUT">
+    <label for="username">Username</label>
+    <input th:value="${viewUser.username}" type="text" name="username" th:disabled="${!authUser.username.equals(viewUser.username)}"/>
+    <label for="firstName">First Name</label>
+    <input th:value="${viewUser.firstName}" type="text" name="firstName" th:disabled="${!authUser.username.equals(viewUser.username)}"/>
+    <input type="submit" value="Edit User Info"/>
+</form>
+
+<form th:action="${'/follow-user/' + viewUser.id}" th:method="PUT">
+    <input type="hidden" th:value="${viewUser.username}">
+    <input type="submit" value="Follow User" th:disabled="${authUser.username.equals(viewUser.username)}">
+</form>
+
+<h2>Users followed</h2>
+<ul th:each="followedUser : ${usersIFollow}">
+    <li th:text="${followedUser.username}"></li>
+</ul>
+
+<h2>Users that follow this user</h2>
+<ul th:each="userThatFollows : ${usersWhoFollowMe}">
+    <li th:text="${userThatFollows.username}"></li>
+</ul>
+
+</body>
+</html>
