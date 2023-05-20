@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PracticeLecture26</string>
+    <string name="main_activity_placeholder_image" />
+    <string name="main_activity_submit_button">Submit</string>
+    <string name="main_activity_product_name_edit_text_hint">Name</string>
+    <string name="main_activity_product_name_title_text_view">Product</string>
+    <string name="order_form_activity_order_form_title">Order Form</string>
+    <string name="main_activity_go_to_order_form_button">Order Form</string>
+</resources>
