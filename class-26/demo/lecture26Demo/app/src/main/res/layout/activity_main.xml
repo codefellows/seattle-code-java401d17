@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity"
+  tools:layout_editor_absoluteX="3dp"
+  tools:layout_editor_absoluteY="-19dp">
+
+  <TextView
+    android:id="@+id/mainActivitySubmittedTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+    android:id="@+id/mainActivityOrderFormButton"
+    android:layout_width="120dp"
+    android:layout_height="60dp"
+    android:layout_marginBottom="144dp"
+    android:text="@string/order_form_title"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.487"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+    android:id="@+id/mainActivitySubmitButton"
+    android:layout_width="120dp"
+    android:layout_height="60dp"
+    android:layout_marginBottom="24dp"
+    android:text="@string/main_activity_submit_button"
+    app:layout_constraintBottom_toTopOf="@+id/mainActivityOrderFormButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <ImageView
+    android:id="@+id/mainActivityPlaceholderImageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="72dp"
+    android:layout_marginEnd="40dp"
+    android:contentDescription="@string/main_activity_image"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_launcher_background"
+    tools:srcCompat="@tools:sample/avatars" />
+
+  <TextView
+    android:id="@+id/mainActivityTitleInputTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_marginTop="64dp"
+    android:text="@string/main_activity_input_title"
+    android:textSize="34sp"
+    app:layout_constraintEnd_toStartOf="@+id/mainActivityInputEditText"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/mainActivityPlaceholderImageView" />
+
+  <EditText
+    android:id="@+id/mainActivityInputEditText"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:autofillHints=""
+    android:ems="10"
+    android:hint="@string/main_activity_input_hint"
+    android:inputType="textPersonName"
+    app:layout_constraintBottom_toBottomOf="@+id/mainActivityTitleInputTextView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/mainActivityTitleInputTextView"
+    app:layout_constraintTop_toTopOf="@+id/mainActivityTitleInputTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
