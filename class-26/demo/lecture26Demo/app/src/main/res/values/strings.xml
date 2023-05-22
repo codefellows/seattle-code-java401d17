@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">lecture26Demo</string>
+  <string name="main_activity_image">placeholder image</string>
+  <string name="main_activity_input_hint">Name</string>
+  <string name="main_activity_input_title">Title</string>
+  <string name="main_activity_submit_button">Submit</string>
+  <string name="submitted_confirmation">Submitted!</string>
+  <string name="order_form_title">Order Form</string>
+  <string name="order_form_info">Order Form Info</string>
+</resources>
