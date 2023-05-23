@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">practice27</string>
+  <string name="main_activity_image">placeholder image</string>
+  <string name="main_activity_input_hint">Name</string>
+  <string name="main_activity_input_title">Title</string>
+  <string name="main_activity_submit_button">Submit</string>
+  <string name="submitted_confirmation">Submitted!</string>
+  <string name="order_form_title">Order Form</string>
+  <string name="order_form_info">Order Form Info</string>
+  <string name="nickname_title">Nickname</string>
+  <string name="user_profile_nickname_input_hint">Name</string>
+  <string name="save">Save</string>
+  <string name="settings_button_title">settings</string>
+</resources>
