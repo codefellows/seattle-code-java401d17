@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">practice28</string>
+    <string name="main_activity_image">placeholder image</string>
+    <string name="main_activity_input_hint">Name</string>
+    <string name="main_activity_input_title">Title</string>
+    <string name="main_activity_submit_button">Submit</string>
+    <string name="submitted_confirmation">Submitted!</string>
+    <string name="order_form_title">Order Form</string>
+    <string name="order_form_info">Order Form Info</string>
+    <string name="settings_button_description">settings</string>
+    <string name="nickname_hint">Name</string>
+    <string name="nickname_title">Nickname</string>
+    <string name="save_button">Save</string>
+    <string name="no_product_name">No Product Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="blank_product_name">Blank Product Name</string>
+</resources>
