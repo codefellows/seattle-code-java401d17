@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity"
+  tools:layout_editor_absoluteX="3dp"
+  tools:layout_editor_absoluteY="-19dp">
+
+  <TextView
+    android:id="@+id/mainActivitySubmittedTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    app:layout_constraintBottom_toTopOf="@+id/mainActivitySubmitButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+    android:id="@+id/mainActivityOrderFormButton"
+    android:layout_width="120dp"
+    android:layout_height="60dp"
+    android:layout_marginBottom="64dp"
+    android:text="@string/order_form_title"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.487"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+    android:id="@+id/mainActivitySubmitButton"
+    android:layout_width="120dp"
+    android:layout_height="60dp"
+    android:layout_marginBottom="24dp"
+    android:text="@string/main_activity_submit_button"
+    app:layout_constraintBottom_toTopOf="@+id/mainActivityOrderFormButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+    android:id="@+id/mainActivityNicknameTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_marginBottom="24dp"
+    android:gravity="center"
+    android:text="@string/main_activity_input_title"
+    android:textSize="34sp"
+    app:layout_constraintBottom_toTopOf="@+id/mainActivityInputEditText"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <EditText
+    android:id="@+id/mainActivityInputEditText"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_marginBottom="24dp"
+    android:autofillHints=""
+    android:ems="10"
+    android:hint="@string/main_activity_input_hint"
+    android:inputType="textPersonName"
+    app:layout_constraintBottom_toTopOf="@+id/mainActivitySubmittedTextView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <ImageView
+    android:id="@+id/mainActivitySettingsImageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="24dp"
+    android:background="#000000"
+    android:contentDescription="@string/settings_button_description"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@android:drawable/ic_menu_manage" />
+
+  <!--  TODO: Step 1-1: Add a RecyclerView to your xml (and constrain it!) -->
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/mainActivityProductListRecyclerView"
+    android:layout_width="320sp"
+    android:layout_height="220dp"
+    android:layout_marginBottom="24dp"
+    app:layout_constraintBottom_toTopOf="@+id/mainActivityNicknameTextView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+    android:id="@+id/MainActivityAddProductButtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="36dp"
+    android:layout_marginEnd="16dp"
+    android:text="Add Product"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/mainActivityProductListRecyclerView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

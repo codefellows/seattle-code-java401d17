@@ -1,0 +1,22 @@
+{
+  "api": {
+    "lecture28demo": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 45,
+              "apiKeyExpirationDate": "2023-07-14T18:55:39.956Z",
+              "description": "taskmaster API key"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  }
+}

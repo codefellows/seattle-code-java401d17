@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "lecture28demo",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}
