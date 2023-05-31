@@ -1,34 +1,11 @@
 # this is an auto generated file. This will be overwritten
-query GetTodo($id: ID!) {
-  getTodo(id: $id) {
-    id
-    name
-    description
-    createdAt
-    updatedAt
-  }
-}
-query ListTodos(
-  $filter: ModelTodoFilterInput
-  $limit: Int
-  $nextToken: String
-) {
-  listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
-    items {
-      id
-      name
-      description
-      createdAt
-      updatedAt
-    }
-    nextToken
-  }
-}
 query GetProduct($id: ID!) {
   getProduct(id: $id) {
     id
     name
-    price
+    description
+    dateCreated
+    productCategory
     createdAt
     updatedAt
   }
@@ -42,7 +19,9 @@ query ListProducts(
     items {
       id
       name
-      price
+      description
+      dateCreated
+      productCategory
       createdAt
       updatedAt
     }

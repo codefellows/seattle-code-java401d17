@@ -1,54 +1,33 @@
 # this is an auto generated file. This will be overwritten
-subscription OnCreateTodo {
-  onCreateTodo {
+subscription OnCreateProduct($filter: ModelSubscriptionProductFilterInput) {
+  onCreateProduct(filter: $filter) {
     id
     name
     description
+    dateCreated
+    productCategory
     createdAt
     updatedAt
   }
 }
-subscription OnUpdateTodo {
-  onUpdateTodo {
+subscription OnUpdateProduct($filter: ModelSubscriptionProductFilterInput) {
+  onUpdateProduct(filter: $filter) {
     id
     name
     description
+    dateCreated
+    productCategory
     createdAt
     updatedAt
   }
 }
-subscription OnDeleteTodo {
-  onDeleteTodo {
+subscription OnDeleteProduct($filter: ModelSubscriptionProductFilterInput) {
+  onDeleteProduct(filter: $filter) {
     id
     name
     description
-    createdAt
-    updatedAt
-  }
-}
-subscription OnCreateProduct {
-  onCreateProduct {
-    id
-    name
-    price
-    createdAt
-    updatedAt
-  }
-}
-subscription OnUpdateProduct {
-  onUpdateProduct {
-    id
-    name
-    price
-    createdAt
-    updatedAt
-  }
-}
-subscription OnDeleteProduct {
-  onDeleteProduct {
-    id
-    name
-    price
+    dateCreated
+    productCategory
     createdAt
     updatedAt
   }
