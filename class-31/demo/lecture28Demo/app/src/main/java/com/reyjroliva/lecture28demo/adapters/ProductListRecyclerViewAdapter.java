@@ -2,6 +2,7 @@ package com.reyjroliva.lecture28demo.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +11,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amplifyframework.datastore.generated.model.Product;
 import com.reyjroliva.lecture28demo.MainActivity;
 import com.reyjroliva.lecture28demo.R;
 import com.reyjroliva.lecture28demo.activities.OrderFormActivity;
-import com.reyjroliva.lecture28demo.models.Product;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.TimeZone;
 
 // TODO: Step 1-4: create a  class whose sole purpose is to manager RecyclerView (a RecyclerView Adapter!)
 //TODO: Step 3-1: Clean up RecyclerViewAdapter references to actually use <ProductListRecyclerViewAdatper.ProductListViewHolder>
 public class ProductListRecyclerViewAdapter extends RecyclerView.Adapter<ProductListRecyclerViewAdapter.ProductListViewHolder> {
+  public static final String TAG = "ProductListRecyclerViewAdapter";
 
   // TODO: Step 2-3 cont.: in RecyclerViewAdapter, at top of class add a list of the data items as a field
   private List<Product> products;
@@ -49,7 +58,26 @@ public class ProductListRecyclerViewAdapter extends RecyclerView.Adapter<Product
     // TODO: Step 2-4: (in RecyclerView.Adapter.onBindViewHolder()) Bind the data items to the fragments inside of the ViewHolders
     TextView productFragmentTextView = (TextView) holder.itemView.findViewById(R.id.productFragmentTextView);
     String productName = products.get(position).getName();
-    String productFragmentText =  position + "." + productName;
+
+    // Add date created to fragment
+    DateFormat dateCreatedIso8601InputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault());
+    dateCreatedIso8601InputFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    DateFormat dateCreatedOutputFormat = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
+    dateCreatedOutputFormat.setTimeZone(TimeZone.getDefault());
+    String dateCreatedCreateString = "";
+
+    try{
+      Date dateCreatedJavaDate = dateCreatedIso8601InputFormat.parse(products.get(position).getDateCreated().format());
+      if(dateCreatedJavaDate != null) {
+        dateCreatedCreateString = dateCreatedOutputFormat.format(dateCreatedJavaDate);
+      }
+    } catch (ParseException e) {
+      Log.e(TAG, "failed to parse and format data with stack trace: " +  e);
+      e.printStackTrace();
+    }
+
+
+    String productFragmentText =  position + "." + productName + " Date created: " + dateCreatedCreateString;
     productFragmentTextView.setText(productFragmentText);
 
     // TODO: Step 3-3: Create an onClickListener, make a intent inside it, and call this intent with an extra to go to your details page activity

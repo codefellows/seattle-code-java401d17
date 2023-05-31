@@ -1,40 +1,4 @@
 # this is an auto generated file. This will be overwritten
-mutation CreateTodo(
-  $input: CreateTodoInput!
-  $condition: ModelTodoConditionInput
-) {
-  createTodo(input: $input, condition: $condition) {
-    id
-    name
-    description
-    createdAt
-    updatedAt
-  }
-}
-mutation UpdateTodo(
-  $input: UpdateTodoInput!
-  $condition: ModelTodoConditionInput
-) {
-  updateTodo(input: $input, condition: $condition) {
-    id
-    name
-    description
-    createdAt
-    updatedAt
-  }
-}
-mutation DeleteTodo(
-  $input: DeleteTodoInput!
-  $condition: ModelTodoConditionInput
-) {
-  deleteTodo(input: $input, condition: $condition) {
-    id
-    name
-    description
-    createdAt
-    updatedAt
-  }
-}
 mutation CreateProduct(
   $input: CreateProductInput!
   $condition: ModelProductConditionInput
@@ -42,7 +6,9 @@ mutation CreateProduct(
   createProduct(input: $input, condition: $condition) {
     id
     name
-    price
+    description
+    dateCreated
+    productCategory
     createdAt
     updatedAt
   }
@@ -54,7 +20,9 @@ mutation UpdateProduct(
   updateProduct(input: $input, condition: $condition) {
     id
     name
-    price
+    description
+    dateCreated
+    productCategory
     createdAt
     updatedAt
   }
@@ -66,7 +34,9 @@ mutation DeleteProduct(
   deleteProduct(input: $input, condition: $condition) {
     id
     name
-    price
+    description
+    dateCreated
+    productCategory
     createdAt
     updatedAt
   }
