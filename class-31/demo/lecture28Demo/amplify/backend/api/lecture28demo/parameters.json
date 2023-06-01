@@ -1,6 +1,5 @@
 {
   "AppSyncApiName": "lecture28demo",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-05-31T16:36:15.291Z"
+  "DynamoDBEnableServerSideEncryption": false
 }

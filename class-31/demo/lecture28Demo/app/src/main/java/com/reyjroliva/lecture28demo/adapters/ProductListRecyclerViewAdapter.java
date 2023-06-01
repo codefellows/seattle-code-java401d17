@@ -15,6 +15,7 @@ import com.amplifyframework.datastore.generated.model.Product;
 import com.reyjroliva.lecture28demo.MainActivity;
 import com.reyjroliva.lecture28demo.R;
 import com.reyjroliva.lecture28demo.activities.OrderFormActivity;
+//import com.reyjroliva.lecture28demo.models.Product;
 
 import java.text.DateFormat;
 import java.text.ParseException;

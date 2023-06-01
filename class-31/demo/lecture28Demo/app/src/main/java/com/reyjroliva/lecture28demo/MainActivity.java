@@ -15,8 +15,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
+import com.amplifyframework.datastore.generated.model.Contact;
 import com.amplifyframework.datastore.generated.model.Product;
 import com.reyjroliva.lecture28demo.activities.AddProductActivity;
 import com.reyjroliva.lecture28demo.activities.OrderFormActivity;
@@ -39,6 +41,39 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    // Updated in class 33 demo (comment out after saving to DB once!)
+    //Contact contact1 = Contact.builder()
+    //  .email("rey@example.com")
+    //  .fullName("Rey Oliva")
+    //  .build();
+    //Amplify.API.mutate(
+    //  ModelMutation.create(contact1),
+    //  successRespose -> Log.i(TAG, "MainActivity.onCreate(): made a contact successfully"),
+    //  failureResponse -> Log.i(TAG, "MainACtivity.onCreate(): contact failed with this response: " + failureResponse)
+    //);
+    //
+    //Contact contact2 = Contact.builder()
+    //  .email("alex@example.com")
+    //  .fullName("Alex White")
+    //  .build();
+    //Amplify.API.mutate(
+    //  ModelMutation.create(contact2),
+    //  successRespose -> Log.i(TAG, "MainActivity.onCreate(): made a contact successfully"),
+    //  failureResponse -> Log.i(TAG, "MainACtivity.onCreate(): contact failed with this response: " + failureResponse)
+    //);
+    //
+    //Contact contact3 = Contact.builder()
+    //  .email("ed@example.com")
+    //  .fullName("Ed Younskevicious")
+    //  .build();
+    //Amplify.API.mutate(
+    //  ModelMutation.create(contact3),
+    //  successRespose -> Log.i(TAG, "MainActivity.onCreate(): made a contact successfully"),
+    //  failureResponse -> Log.i(TAG, "MainACtivity.onCreate(): contact failed with this response: " + failureResponse)
+    //);
+
+
     // TODO: SETUP DATABASE QUERY!
 //    products = zorkMasterDatabase.productDao().findAllProducts();
     products = new ArrayList<>();
@@ -61,7 +96,16 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "Read products successfully!");
         products.clear();
         for(Product databaseProduct : success.getData()) {
-          products.add(databaseProduct);
+          // Updated in class 33 demo
+          // used for filtering, in lab the selected team will be done on the settings page
+          /* hint: pass the selected team string to main activity via an intent or
+           * !!save via sharedPreferences!! and then you can use that string to filter!
+           * Make sure you delete Tasks with null Team values!
+           */
+          String contactName = "Rey Oliva";
+          if(databaseProduct.getContactPerson().getFullName().equals(contactName)) {
+            products.add(databaseProduct);
+          }
         }
 
         //adapter.notifyDataSetChanged(); //since this runs asynch, teh adapter may have already been rendered, sp tell it to update again

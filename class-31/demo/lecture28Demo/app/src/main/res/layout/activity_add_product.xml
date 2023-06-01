@@ -9,34 +9,48 @@
   <EditText
     android:id="@+id/AddProductETName"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:layout_marginStart="101dp"
     android:layout_marginTop="58dp"
+    android:autofillHints=""
     android:ems="10"
     android:inputType="textPersonName"
-    android:text="Name"
+    android:labelFor="@id/AddProductETName"
+    android:text="@string/name"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
   <EditText
     android:id="@+id/AddProductETPrice"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:layout_marginStart="97dp"
     android:layout_marginTop="70dp"
     android:ems="10"
-    android:hint="Price"
+    android:hint="@string/price"
     android:inputType="numberDecimal"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/AddProductETName" />
+    app:layout_constraintTop_toBottomOf="@+id/AddProductETName"
+    android:autofillHints="" />
 
   <Spinner
     android:id="@+id/AddProductEnumTypeSpinner"
     android:layout_width="409dp"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:layout_marginStart="1dp"
-    android:layout_marginBottom="116dp"
+    android:layout_marginBottom="48dp"
+    android:contentDescription="@string/product_categories"
     app:layout_constraintBottom_toTopOf="@+id/AddProductSaveBttn"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <Spinner
+    android:id="@+id/addProductContactSpinner"
+    android:layout_width="409dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginBottom="24dp"
+    android:contentDescription="@string/product_contacts"
+    app:layout_constraintBottom_toTopOf="@+id/AddProductEnumTypeSpinner"
     app:layout_constraintStart_toStartOf="parent" />
 
   <Button
@@ -45,7 +59,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="128dp"
     android:layout_marginBottom="68dp"
-    android:text="Save Product"
+    android:text="@string/save_product"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
