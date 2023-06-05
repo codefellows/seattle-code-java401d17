@@ -15,16 +15,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
-import com.amplifyframework.datastore.generated.model.Contact;
 import com.amplifyframework.datastore.generated.model.Product;
 import com.reyjroliva.lecture28demo.activities.AddProductActivity;
 import com.reyjroliva.lecture28demo.activities.OrderFormActivity;
 import com.reyjroliva.lecture28demo.activities.UserProfileActivity;
 import com.reyjroliva.lecture28demo.adapters.ProductListRecyclerViewAdapter;
-//import com.reyjroliva.lecture28demo.models.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +29,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
   public static final String PRODUCT_NAME_EXTRA_TAG = "productName"; // at top of class, for other classes to be able to reference
   private final String TAG = "MainActivity";
-  public static final String DATABASE_NAME = "zorks_product_database";
   List<Product> products;
   ProductListRecyclerViewAdapter adapter;
   SharedPreferences preferences;
@@ -218,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   public void setupAddProductButton(){
-    findViewById(R.id.MainActivityAddProductButtn).setOnClickListener(view -> {
+    findViewById(R.id.MainActivityAddProductButton).setOnClickListener(view -> {
       Intent goToAddProductActivity = new Intent(this, AddProductActivity.class);
       startActivity(goToAddProductActivity);
     });
