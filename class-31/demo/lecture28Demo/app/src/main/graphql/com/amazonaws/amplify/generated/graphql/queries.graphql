@@ -3,10 +3,10 @@ query GetProduct($id: ID!) {
   getProduct(id: $id) {
     id
     name
+    contactId
     description
     dateCreated
     productCategory
-    contactId
     contactPerson {
       id
       email
@@ -17,6 +17,7 @@ query GetProduct($id: ID!) {
       createdAt
       updatedAt
     }
+    s3Key
     createdAt
     updatedAt
   }
@@ -30,10 +31,10 @@ query ListProducts(
     items {
       id
       name
+      contactId
       description
       dateCreated
       productCategory
-      contactId
       contactPerson {
         id
         email
@@ -41,6 +42,7 @@ query ListProducts(
         createdAt
         updatedAt
       }
+      s3Key
       createdAt
       updatedAt
     }
@@ -56,10 +58,11 @@ query GetContact($id: ID!) {
       items {
         id
         name
+        contactId
         description
         dateCreated
         productCategory
-        contactId
+        s3Key
         createdAt
         updatedAt
       }
@@ -107,10 +110,10 @@ query ProductsByContactIdAndName(
     items {
       id
       name
+      contactId
       description
       dateCreated
       productCategory
-      contactId
       contactPerson {
         id
         email
@@ -118,6 +121,7 @@ query ProductsByContactIdAndName(
         createdAt
         updatedAt
       }
+      s3Key
       createdAt
       updatedAt
     }

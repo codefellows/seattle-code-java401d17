@@ -6,10 +6,10 @@ mutation CreateProduct(
   createProduct(input: $input, condition: $condition) {
     id
     name
+    contactId
     description
     dateCreated
     productCategory
-    contactId
     contactPerson {
       id
       email
@@ -20,6 +20,7 @@ mutation CreateProduct(
       createdAt
       updatedAt
     }
+    s3Key
     createdAt
     updatedAt
   }
@@ -31,10 +32,10 @@ mutation UpdateProduct(
   updateProduct(input: $input, condition: $condition) {
     id
     name
+    contactId
     description
     dateCreated
     productCategory
-    contactId
     contactPerson {
       id
       email
@@ -45,6 +46,7 @@ mutation UpdateProduct(
       createdAt
       updatedAt
     }
+    s3Key
     createdAt
     updatedAt
   }
@@ -56,10 +58,10 @@ mutation DeleteProduct(
   deleteProduct(input: $input, condition: $condition) {
     id
     name
+    contactId
     description
     dateCreated
     productCategory
-    contactId
     contactPerson {
       id
       email
@@ -70,6 +72,7 @@ mutation DeleteProduct(
       createdAt
       updatedAt
     }
+    s3Key
     createdAt
     updatedAt
   }
@@ -86,10 +89,11 @@ mutation CreateContact(
       items {
         id
         name
+        contactId
         description
         dateCreated
         productCategory
-        contactId
+        s3Key
         createdAt
         updatedAt
       }
@@ -111,10 +115,11 @@ mutation UpdateContact(
       items {
         id
         name
+        contactId
         description
         dateCreated
         productCategory
-        contactId
+        s3Key
         createdAt
         updatedAt
       }
@@ -136,10 +141,11 @@ mutation DeleteContact(
       items {
         id
         name
+        contactId
         description
         dateCreated
         productCategory
-        contactId
+        s3Key
         createdAt
         updatedAt
       }

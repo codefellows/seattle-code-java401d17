@@ -7,7 +7,7 @@
           "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDate": "2024-05-31T20:36:19.635Z",
+              "apiKeyExpirationDate": "2024-06-06T19:40:47.015Z",
               "apiKeyExpirationDays": 365,
               "description": "first api key for new amplify app"
             },
@@ -45,6 +45,13 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "storage": {
+    "reyMaster": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }
