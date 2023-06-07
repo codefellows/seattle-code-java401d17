@@ -6,8 +6,10 @@
     "defaultAuthType": {
       "mode": "API_KEY",
       "expirationTime": 365,
-      "apiKeyExpirationDate": "2024-05-31T20:36:19.635Z",
+      "apiKeyExpirationDate": "2024-06-06T19:40:47.015Z",
       "keyDescription": "first api key for new amplify app"
-    }
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
   }
 }

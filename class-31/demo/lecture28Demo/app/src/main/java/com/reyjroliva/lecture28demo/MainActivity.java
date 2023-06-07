@@ -16,11 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amplifyframework.api.graphql.model.ModelQuery;
-import com.amplifyframework.auth.AuthUserAttributeKey;
-import com.amplifyframework.auth.cognito.result.AWSCognitoAuthSignOutResult;
-import com.amplifyframework.auth.options.AuthSignOutOptions;
-import com.amplifyframework.auth.options.AuthSignUpOptions;
-import com.amplifyframework.auth.result.AuthSignOutResult;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.Product;
 import com.reyjroliva.lecture28demo.activities.AddProductActivity;
@@ -28,6 +23,9 @@ import com.reyjroliva.lecture28demo.activities.OrderFormActivity;
 import com.reyjroliva.lecture28demo.activities.UserProfileActivity;
 import com.reyjroliva.lecture28demo.adapters.ProductListRecyclerViewAdapter;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,40 +41,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    // Updated in class 33 demo (comment out after saving to DB once!)
-    //Contact contact1 = Contact.builder()
-    //  .email("rey@example.com")
-    //  .fullName("Rey Oliva")
-    //  .build();
-    //Amplify.API.mutate(
-    //  ModelMutation.create(contact1),
-    //  successRespose -> Log.i(TAG, "MainActivity.onCreate(): made a contact successfully"),
-    //  failureResponse -> Log.i(TAG, "MainACtivity.onCreate(): contact failed with this response: " + failureResponse)
-    //);
-    //
-    //Contact contact2 = Contact.builder()
-    //  .email("alex@example.com")
-    //  .fullName("Alex White")
-    //  .build();
-    //Amplify.API.mutate(
-    //  ModelMutation.create(contact2),
-    //  successRespose -> Log.i(TAG, "MainActivity.onCreate(): made a contact successfully"),
-    //  failureResponse -> Log.i(TAG, "MainACtivity.onCreate(): contact failed with this response: " + failureResponse)
-    //);
-    //
-    //Contact contact3 = Contact.builder()
-    //  .email("ed@example.com")
-    //  .fullName("Ed Younskevicious")
-    //  .build();
-    //Amplify.API.mutate(
-    //  ModelMutation.create(contact3),
-    //  successRespose -> Log.i(TAG, "MainActivity.onCreate(): made a contact successfully"),
-    //  failureResponse -> Log.i(TAG, "MainACtivity.onCreate(): contact failed with this response: " + failureResponse)
-    //);
 
-
-    // TODO: SETUP DATABASE QUERY!
-//    products = zorkMasterDatabase.productDao().findAllProducts();
     products = new ArrayList<>();
 
     setUpSettingsButton();
@@ -86,15 +51,15 @@ public class MainActivity extends AppCompatActivity {
     setupAddProductButton();
   }
 
+
   @Override
   protected void onResume() {
     super.onResume();
-    products.clear();
+//    products.clear();
 
     Amplify.API.query(
       ModelQuery.list(Product.class),
       success -> {
-        Log.i(TAG, "Read products successfully!");
         products.clear();
         for(Product databaseProduct : success.getData()) {
           // Updated in class 33 demo
@@ -107,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
           if(databaseProduct.getContactPerson().getFullName().equals(contactName)) {
             products.add(databaseProduct);
           }
+        Log.i(TAG, "Read products successfully!");
         }
 
         //adapter.notifyDataSetChanged(); //since this runs asynch, teh adapter may have already been rendered, sp tell it to update again

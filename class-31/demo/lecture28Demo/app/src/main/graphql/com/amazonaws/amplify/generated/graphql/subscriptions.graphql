@@ -3,10 +3,10 @@ subscription OnCreateProduct($filter: ModelSubscriptionProductFilterInput) {
   onCreateProduct(filter: $filter) {
     id
     name
+    contactId
     description
     dateCreated
     productCategory
-    contactId
     contactPerson {
       id
       email
@@ -17,6 +17,7 @@ subscription OnCreateProduct($filter: ModelSubscriptionProductFilterInput) {
       createdAt
       updatedAt
     }
+    s3Key
     createdAt
     updatedAt
   }
@@ -25,10 +26,10 @@ subscription OnUpdateProduct($filter: ModelSubscriptionProductFilterInput) {
   onUpdateProduct(filter: $filter) {
     id
     name
+    contactId
     description
     dateCreated
     productCategory
-    contactId
     contactPerson {
       id
       email
@@ -39,6 +40,7 @@ subscription OnUpdateProduct($filter: ModelSubscriptionProductFilterInput) {
       createdAt
       updatedAt
     }
+    s3Key
     createdAt
     updatedAt
   }
@@ -47,10 +49,10 @@ subscription OnDeleteProduct($filter: ModelSubscriptionProductFilterInput) {
   onDeleteProduct(filter: $filter) {
     id
     name
+    contactId
     description
     dateCreated
     productCategory
-    contactId
     contactPerson {
       id
       email
@@ -61,6 +63,7 @@ subscription OnDeleteProduct($filter: ModelSubscriptionProductFilterInput) {
       createdAt
       updatedAt
     }
+    s3Key
     createdAt
     updatedAt
   }
@@ -74,10 +77,11 @@ subscription OnCreateContact($filter: ModelSubscriptionContactFilterInput) {
       items {
         id
         name
+        contactId
         description
         dateCreated
         productCategory
-        contactId
+        s3Key
         createdAt
         updatedAt
       }
@@ -96,10 +100,11 @@ subscription OnUpdateContact($filter: ModelSubscriptionContactFilterInput) {
       items {
         id
         name
+        contactId
         description
         dateCreated
         productCategory
-        contactId
+        s3Key
         createdAt
         updatedAt
       }
@@ -118,10 +123,11 @@ subscription OnDeleteContact($filter: ModelSubscriptionContactFilterInput) {
       items {
         id
         name
+        contactId
         description
         dateCreated
         productCategory
-        contactId
+        s3Key
         createdAt
         updatedAt
       }

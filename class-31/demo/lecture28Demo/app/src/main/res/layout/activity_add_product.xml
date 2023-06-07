@@ -62,4 +62,14 @@
     android:text="@string/save_product"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent" />
+
+  <ImageView
+    android:id="@+id/AddProductActivityBttnImageSelection"
+    android:layout_width="73dp"
+    android:layout_height="65dp"
+    android:layout_marginStart="11dp"
+    android:layout_marginTop="16dp"
+    app:layout_constraintStart_toEndOf="@+id/AddProductETName"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/amplify_storage_transfer_notification_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

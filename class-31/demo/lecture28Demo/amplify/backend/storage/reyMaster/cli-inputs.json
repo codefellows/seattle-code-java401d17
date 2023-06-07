@@ -1,0 +1,18 @@
+{
+  "resourceName": "reyMaster",
+  "policyUUID": "f45b8ef0",
+  "bucketName": "lecture28demo479f5f4357774895b94024c38beef90e",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
