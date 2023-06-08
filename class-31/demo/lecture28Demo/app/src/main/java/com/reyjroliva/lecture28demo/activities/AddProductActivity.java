@@ -157,7 +157,7 @@ public class AddProductActivity extends AppCompatActivity {
   public void launchImageSelectionIntent(){
     Intent imageFilePickingIntent = new Intent(Intent.ACTION_GET_CONTENT);
     imageFilePickingIntent.setType("*/*");
-    imageFilePickingIntent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"image/jpeg", "image/jpg"});
+    imageFilePickingIntent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"image/jpeg", "image/jpg", "image/png"});
 
     activityResultLauncher.launch(imageFilePickingIntent);
   }
