@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.Product;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.reyjroliva.lecture28demo.activities.AddProductActivity;
 import com.reyjroliva.lecture28demo.activities.OrderFormActivity;
 import com.reyjroliva.lecture28demo.activities.UserProfileActivity;

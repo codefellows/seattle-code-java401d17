@@ -4,12 +4,17 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
+import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.OpenableColumns;
@@ -27,14 +32,24 @@ import com.amplifyframework.core.model.temporal.Temporal;
 import com.amplifyframework.datastore.generated.model.Contact;
 import com.amplifyframework.datastore.generated.model.Product;
 import com.amplifyframework.datastore.generated.model.ProductCategoryEnum;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
+import com.google.android.gms.tasks.CancellationToken;
+import com.google.android.gms.tasks.OnTokenCanceledListener;
 import com.reyjroliva.lecture28demo.R;
 
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
@@ -46,6 +61,11 @@ public class AddProductActivity extends AppCompatActivity {
   CompletableFuture<List<Contact>> contactsFuture = null;
   ActivityResultLauncher<Intent> activityResultLauncher;
   private String s3Key;
+  // TODO: Class-39: Step 3-1: declare the FusedLocationProviderClient object
+  private FusedLocationProviderClient fusedLocationProviderClient;
+
+  // Class-39: Added for subscription example with multiple location updates
+  private Geocoder geocoder;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +77,11 @@ public class AddProductActivity extends AppCompatActivity {
     // WARNING: The ActivityResultLauncher MUST be initialized in onCreate(), not in onResume() or a click handler! Otherwise it will fail
     activityResultLauncher = getImagePickingActivityResultLauncher();
 
+    // TODO: Class-39: Step 2: Request permission in the appropriate activity's onCreate()
+    requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+    // TODO: Class-39: Step 3-2: Set up the FusedLocationProviderClient
+    fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getApplicationContext());
+
     // Updated in class 33 demo
     contactsFuture = new CompletableFuture<>();
     contactSpinner = findViewById(R.id.addProductContactSpinner);
@@ -65,6 +90,74 @@ public class AddProductActivity extends AppCompatActivity {
     setupTypeSpinner();
     saveProduct();
     setupImageButton();
+
+    // Everything in this method from this point on is NOT REQUIRED FOR LAB39
+    // *: Geocoder at the botom may be helpful for nicely formatting location for lab
+
+    // TODO: getCurrentLocation() example
+    fusedLocationProviderClient.flushLocations(); // <- try this use if you are not seeing the location update
+    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+      && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+      // TODO: Consider calling
+      //    ActivityCompat#requestPermissions
+      // here to request the missing permissions, and then overriding
+      //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+      //                                          int[] grantResults)
+      // to handle the case where the user grants the permission. See the documentation
+      // for ActivityCompat#requestPermissions for more details.
+      Log.e(TAG, "Application does not have access to either ACCESS_FINE_LOCATION or ACCESS_COARSE_LOCATION");
+      return;
+    }
+
+    fusedLocationProviderClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, new CancellationToken() {
+      @NonNull
+      @Override
+      public CancellationToken onCanceledRequested(@NonNull OnTokenCanceledListener onTokenCanceledListener) {
+        return null;
+      }
+
+      @Override
+      public boolean isCancellationRequested() {
+        return false;
+      }
+    }).addOnSuccessListener(location -> {
+      if (location == null) {
+        Log.e(TAG, "Location callback was null!");
+      } else {
+        String currentLatitude = Double.toString(location.getLatitude());
+        String currentLongitude = Double.toString(location.getLongitude());
+        Log.i(TAG, "Our current latitude: " + currentLatitude);
+        Log.i(TAG, "Our current longitude: " + currentLongitude);
+      }
+    });
+
+    // Subscription example for many updates
+    // Geocoder object instantiated at the top of the class
+    geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+    LocationRequest locationRequest = new LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 5000)
+      .build();
+
+    LocationCallback locationCallback = new LocationCallback() {
+      @Override
+      public void onLocationResult(@NonNull LocationResult locationResult) {
+        super.onLocationResult(locationResult);
+
+        try {
+          String address = geocoder.getFromLocation(
+            locationResult.getLastLocation().getLatitude(),
+            locationResult.getLastLocation().getLongitude(),
+            1) // gives us single best guess
+            .get(0) // grab the best guess from the returned "list"
+            .getAddressLine(0); // get first the address line
+
+          Log.i(TAG, "Repeating current location is: " + address);
+        } catch (IOException ioe) {
+          Log.e(TAG, "Could not get subscribed location: " + ioe.getMessage());
+        }
+      }
+    };
+
+    fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, getMainLooper());
   }
 
   // Updated in class 33 demo
@@ -108,6 +201,20 @@ public class AddProductActivity extends AppCompatActivity {
   public void saveProduct(){
       // set onClick listner
     findViewById(R.id.AddProductSaveBttn).setOnClickListener(v -> {
+      // TODO: Class-39: Step 4: Return (leave the click method) if we don't have access to the appropriate location permissions
+      if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+        && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        // TODO: Consider calling
+        //    ActivityCompat#requestPermissions
+        // here to request the missing permissions, and then overriding
+        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+        //                                          int[] grantResults)
+        // to handle the case where the user grants the permission. See the documentation
+        // for ActivityCompat#requestPermissions for more details.
+        Log.e(TAG, "Application does not have access to either ACCESS_FINE_LOCATION or ACCESS_COARSE_LOCATION");
+        return;
+      }
+
       //Updated in class 33 demo
       String selectedContactString = contactSpinner.getSelectedItem().toString();
 
@@ -123,6 +230,22 @@ public class AddProductActivity extends AppCompatActivity {
       Contact selectedContact = contacts.stream().filter(c -> c.getFullName().equals(selectedContactString)).findAny().orElseThrow(RuntimeException::new);
 
       String productName = ((EditText)findViewById(R.id.AddProductETName)).getText().toString();
+
+      // TODO: Class-39: Step 5: Grab the location in an onSuccessListener (can add other listeners too!)
+      fusedLocationProviderClient.getLastLocation().addOnSuccessListener(location -> {
+        // "location" here should be null if no one else has ever requested a location prior!
+        // Try running Google Maps first and clicking your current location if you have a null callback here, or a null object error when getting the latitude!
+        if(location == null) {
+          Log.e(TAG, "Location callback was null!");
+        } else {
+          String currentLatitude = Double.toString(location.getLatitude());
+          String currentLongitude = Double.toString(location.getLongitude());
+          Log.i(TAG, "Our latitude: " + location.getLatitude());
+          Log.i(TAG, "Our longitude: " + location.getLongitude());
+          // TODO: For lab: Add latitude and longitude to product (task) model
+          // TODO: For lab: Move logic to create and add product (task) to DynamoDB database into this callback!
+        }
+      });
 
       Product newProduct = Product.builder()
         .name(productName)
