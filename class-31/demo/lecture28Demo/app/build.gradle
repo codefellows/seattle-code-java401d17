@@ -35,6 +35,8 @@ dependencies {
     implementation 'com.amplifyframework:aws-datastore:2.2.2'
     implementation 'com.amplifyframework:aws-auth-cognito:2.8.4'
     implementation 'com.amplifyframework:aws-storage-s3:2.8.4'
+    // TODO: Class-39: Step 0: Add location provider dependency!!!
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
     // Support for Java 8 features
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
