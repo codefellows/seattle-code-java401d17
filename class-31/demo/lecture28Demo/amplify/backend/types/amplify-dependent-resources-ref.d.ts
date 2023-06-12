@@ -1,4 +1,11 @@
 export type AmplifyDependentResourcesAttributes = {
+  "analytics": {
+    "lecture28demo": {
+      "Id": "string",
+      "Region": "string",
+      "appName": "string"
+    }
+  },
   "api": {
     "lecture28demo": {
       "GraphQLAPIEndpointOutput": "string",
@@ -15,6 +22,13 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolArn": "string",
       "UserPoolId": "string",
       "UserPoolName": "string"
+    }
+  },
+  "predictions": {
+    "speechGeneratora40686d5": {
+      "language": "string",
+      "region": "string",
+      "voice": "string"
     }
   },
   "storage": {

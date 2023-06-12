@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amplifyframework.analytics.AnalyticsEvent;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.Product;
@@ -27,6 +28,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    AnalyticsEvent openAppEvent = AnalyticsEvent.builder()
+      .name("openedApp")
+      .addProperty("time", Long.toString(new Date().getTime()))
+      .addProperty("trackingEvent", "main activity opened")
+      .build();
+
+    Log.i(TAG, "created event: " + openAppEvent.getName());
+
+    Amplify.Analytics.recordEvent(openAppEvent);
 
 
     products = new ArrayList<>();

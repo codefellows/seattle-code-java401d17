@@ -31,4 +31,5 @@
   <string name="login_page">Login Page</string>
   <string name="login">Login</string>
   <string name="logout">Logout</string>
+    <string name="speak">Speak</string>
 </resources>

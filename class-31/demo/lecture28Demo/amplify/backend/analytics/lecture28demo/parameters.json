@@ -1,0 +1,21 @@
+{
+    "appName": "lecture28demo",
+    "roleName": "pinpointLambdaRole2405bce2",
+    "cloudformationPolicyName": "cloudformationPolicy2405bce2",
+    "cloudWatchPolicyName": "cloudWatchPolicy2405bce2",
+    "pinpointPolicyName": "pinpointPolicy2405bce2",
+    "authPolicyName": "pinpoint_amplify_2405bce2",
+    "unauthPolicyName": "pinpoint_amplify_2405bce2",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
