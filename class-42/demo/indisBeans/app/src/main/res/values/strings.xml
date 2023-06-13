@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">indisBeans</string>
+    <string name="insterstitial_ad">Interstitial Ad</string>
+  <string name="rewarded_ad">Rewarded Ad</string>
+</resources>
