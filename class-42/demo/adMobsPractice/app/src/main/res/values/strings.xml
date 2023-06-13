@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">adMobsPractice</string>
+    <string name="start_interstitial">Interstitial Ad</string>
+  <string name="rewarded_ad">Rewarded Ad</string>
+</resources>
